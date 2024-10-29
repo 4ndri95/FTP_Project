@@ -129,17 +129,17 @@ def main():
     setup_logging()
 
     ftp_servers = [
-        {"username": "toi_guaruja", "password": "tgua9987"},
-        {"username": "toi_atibaia", "password": "tatb9987"},
-        {"username": "toi_rioclaro", "password": "trcl9987"},
-        {"username": "toi_votuporanga", "password": "tvtp9987"}
+        {"username": "username", "password": "password"},
+        {"username": "username", "password": "password"},
+        {"username": "username", "password": "password"},
+        {"username": "username", "password": "password"}
     ]
 
-    ftp_folders = ["/Auto Religacao", "/Avaria", "/processo_completo_PI"]
+    ftp_folders = ["/directory_1", "/directory_2", "/directory_3"]
     base_folders = {
-        "/Auto Religacao": "S:/SRC/01_Gestao_da_Receita/01-Recuperacao_Energia/03-Usuarios/ALEX GUIDONI/--- ANÁLISE TOIS FTP/===AUTO RELIGAÇÃO",
-        "/Avaria": "S:/SRC/01_Gestao_da_Receita/01-Recuperacao_Energia/03-Usuarios/ALEX GUIDONI/--- ANÁLISE TOIS FTP/===AVARIA",
-        "/processo_completo_PI": "S:/SRC/01_Gestao_da_Receita/01-Recuperacao_Energia/03-Usuarios/ALEX GUIDONI/--- ANÁLISE TOIS FTP/===PI"
+        "/directory_1": "//path//to//directory",
+        "/directory_2": "//path//to//directory",
+        "/directory_3": "//path//to//directory"
     }
 
     transferred_files_by_base_folder = {}
