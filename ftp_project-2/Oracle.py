@@ -10,7 +10,7 @@ from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
 
 # Inicializa o cliente Oracle
-cx_Oracle.init_oracle_client(lib_dir=r"S:\\SRC\\01_Gestao_da_Receita\\01-Recuperacao_Energia\\03-Usuarios\\ANDERSON_JUNIOR\\instantclient_21_6")
+cx_Oracle.init_oracle_client(lib_dir=r"\\instantclient_21_6")
 
 # Configuração do logging
 logging.basicConfig(filename='pdf_collection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -100,16 +100,16 @@ def save_to_excel(results, current_date):
                     cell.fill = openpyxl.styles.PatternFill(start_color='4F81BD', end_color='4F81BD', fill_type='solid')
 
         wb.save(spreadsheet_name)
-        print(f"Spreadsheet created with formatting: {spreadsheet_name}")
+        print(f"Planilha criada com formatação: {spreadsheet_name}")
     else:
         print("Nenhum resultado encontrado para a consulta SQL.")
 
 def main():
     directories = [
-        'T:\\Anderson Junior\\teste\\1',
-        'T:\\Anderson Junior\\teste\\2',
-        'T:\\Anderson Junior\\teste\\3',
-        'T:\\Anderson Junior\\teste\\4'
+        '\\teste\\1',
+        '\\teste\\2',
+        '\\teste\\3',
+        '\\teste\\4'
     ]
 
     pdf_files = collect_pdfs(directories)
@@ -121,11 +121,11 @@ def main():
     current_date = get_current_date(date_format)
 
     db_config = {
-        'user': 'B363251',
-        'password': 'Agosto!2024',
-        'address': 'ssc01-c1-scan',
-        'port': 1521,
-        'service_name': 'UE'
+        'user': 'User',
+        'password': 'Password',
+        'address': 'address',
+        'port': port,
+        'service_name': 'service_name'
     }
 
     try:
