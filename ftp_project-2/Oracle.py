@@ -10,7 +10,7 @@ from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
 
 # Inicializa o cliente Oracle
-cx_Oracle.init_oracle_client(lib_dir=r"\\instantclient_21_6")
+cx_Oracle.init_oracle_client(lib_dir=r"//path//to//sql")
 
 # Configuração do logging
 logging.basicConfig(filename='pdf_collection.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -106,10 +106,10 @@ def save_to_excel(results, current_date):
 
 def main():
     directories = [
-        '\\teste\\1',
-        '\\teste\\2',
-        '\\teste\\3',
-        '\\teste\\4'
+        '//path//to//directory',
+        '//path//to//directory',
+        '//path//to//directory',
+        '//path//to//directory'
     ]
 
     pdf_files = collect_pdfs(directories)
